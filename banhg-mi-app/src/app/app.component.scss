@@ -1,0 +1,12 @@
+@import '../assets/styles.module.scss';
+
+main {
+  width: 100vw;
+  min-height: 100vh;
+  background: $my-black;
+  font-family: $font-title;
+
+  h1 {
+    color: white;
+  }
+}
