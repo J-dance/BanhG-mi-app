@@ -1,0 +1,78 @@
+@import "../../assets/styles.module.scss";
+
+.popBackground {
+  position: absolute;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 7.5vw);
+  grid-auto-rows: 1fr;
+  grid-gap: 7.5vw;
+
+  .circle {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background: rgba($my-green, 0.8);
+
+    &:hover {
+      transform: scale(1.2);
+      background: rgba($my-green, 1.0);
+    }
+  }
+}
+
+.popBackground::before {
+  content: '';
+  width: 0;
+  padding-bottom: 100%;
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+}
+
+.popBackground > *:first-child {
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .popBackground {
+    grid-template-columns: repeat(auto-fill, 7.5vw);
+    grid-gap: 7.5vw;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .popBackground {
+    grid-template-columns: repeat(auto-fill, 7.5vw);
+    grid-gap: 7.5vw;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .popBackground {
+    grid-template-columns: repeat(auto-fill, 7.5vw);
+    grid-gap: 7.5vw;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .popBackground {
+    grid-template-columns: repeat(auto-fill, 2.5vw);
+    grid-gap: 2.5vw;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .popBackground {
+    grid-template-columns: repeat(auto-fill, 2.5vw);
+    grid-gap: 2.5vw;
+  }
+}

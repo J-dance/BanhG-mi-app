@@ -43,3 +43,8 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Local Notes:
+inlineStyles error:
+deleted line in angular.json under *'tsConfig'*
+was: ' "inlineStyleLanguage": "scss" '

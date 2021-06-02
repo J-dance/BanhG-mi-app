@@ -1,0 +1,57 @@
+@import "../../assets/styles.module.scss";
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: rgba($my-grey, 0.5);
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  font-family: $font-standard;
+
+  ul {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    list-style-type: none;
+    font-size: 0.8rem;
+    margin: auto;
+    li {
+      margin: 10px;
+      a {
+        text-decoration: none;
+        color: $my-white;
+      }
+    }
+  }
+
+  h3 {
+    font-family: $font-standard;
+    justify-self: end;
+    align-self: center;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  
+}

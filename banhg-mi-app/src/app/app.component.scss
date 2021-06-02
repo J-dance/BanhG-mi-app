@@ -5,5 +5,10 @@ main {
   min-height: 100vh;
   background: $my-black;
   font-family: $font-title;
-  color: white;
+  color: $my-white;
+
+  .navBreak {
+    height: 7vh;
+    width: 100%;
+  }
 }

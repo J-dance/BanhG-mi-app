@@ -1,3 +1,107 @@
-p {
-  color: white;
+@import "../../assets//styles.module.scss";
+
+.home {
+  min-height: 200vh;
+  width: 100%;
+
+  .landing {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+  }
+
+  .mainLogo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+
+  .intro {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    .foodImg {
+      position: absolute;
+      width: 85%;
+      height: auto;
+    }
+
+    .foodImg1 {
+      top: 100px;
+      left: -10px;
+    }
+
+    .foodImg2 {
+      top: 500px;
+      right: -10px;
+    }
+
+    .sideText {
+      transform: rotate(-90deg);
+      font-size: 2.5rem !important;
+      left: -65%;
+      top: 50%;
+    }
+
+    .topText {
+      top: 5%;
+      left: 25%;
+
+      .red {
+        color: $my-red;
+        font-size: 2.4rem;
+      }
+    }
+
+    .middleText {
+      top: 50%;
+      left: 30%;
+    }
+
+    .bottomText {
+      bottom: 0%;
+      left: 10%;
+    }
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .mainLogo {
+    width: 80%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .mainLogo {
+    width: 70%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .mainLogo {
+    width: 60%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .mainLogo {
+    width: 50%;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .mainLogo {
+    width: 40%;
+  }
+
 }

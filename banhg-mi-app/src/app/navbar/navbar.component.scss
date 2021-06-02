@@ -1,10 +1,11 @@
 @import "../../assets/styles.module.scss";
 
 .nav {
-  position: relative;
+  position: fixed;
+  z-index: 8;
   width: 100%;
-  height: 50px;
-
+  min-height: 7vh;
+  background: $my-black;
   display: flex;
   flex-direction: row;
   padding: 10px;
@@ -13,13 +14,13 @@
   h2 {
     color: $my-white;
     position: absolute;
-    font-size: 28px;
+    top: 50%;
+    transform: translateY(-50%);
     letter-spacing: 0.1em;
   }
 
   .red {
     color: $my-red;
-    font-size: 32px;
   }
 
   .active {
@@ -28,13 +29,11 @@
   }
 
   ul {
-    text-decoration: none;
+    list-style-type: none;
     margin: auto;
     
     li {
       font-family: $font-standard;
-      display: inline;
-      margin-left: 150px;
       padding-left: 5px;
       padding-right: 5px;      
       &:hover {
@@ -49,5 +48,107 @@
         text-decoration: none;
       }
     }
+  }
+
+  .bars {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    left: 90%; 
+    transform: translate(-50%, -50%); 
+    color: $my-white;
+    font-size: 1.5rem;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .red {
+    font-size: 1.7rem;
+  }
+
+  ul {
+    li {
+      font-size: 1.2rem;
+      margin: 100px;
+    }
+  }
+  
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  ul {
+    li {
+      display: inline;
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: 1.5rem;    
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  ul {
+    li {
+      display: inline;
+      margin-left: 3rem; 
+      margin-right: 1rem;
+      font-size: 1.5rem;   
+    }
+  }
+  .bars {
+    display: none;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  ul {
+    li {
+      display: inline;
+      margin-left: 5rem;
+      font-size: 1.2rem;    
+    }
+  }
+
+  .bars {
+    display: none;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  ul {
+    li {
+      display: inline;
+      margin: 5rem;
+      font-size: 1.2rem; 
+    }
+  }
+
+  .bars {
+    display: none;
   }
 }

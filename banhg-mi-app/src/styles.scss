@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./assets/styles.module.scss";
 // buttons
 // text boxes
 // font titles
@@ -7,4 +8,77 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
+}
+
+// TITLE/FONTS
+.title {
+  position: absolute;
+  font-size: 2rem;
+  color: $my-white;
+  letter-spacing: 0.1em;
+  text-shadow:
+   -2px -2px 0 $my-black,  
+    2px -2px 0 $my-black,
+    -2px 2px 0 $my-black,
+     2px 2px 0 $my-black;
+}
+
+.highlight {
+  background: $my-orange;
+  padding: 5px;
+}
+
+// BOX SHADOW THEME
+.shadow-left {
+  box-shadow: -15px 15px $my-orange;
+}
+
+.shadow-right {
+  box-shadow: 15px 15px $my-orange;
+}
+
+// --------------------------
+// HORIZONTAL TICKER BANNER
+/* OUTER CONTAINER */
+.tcontainer {
+  position: sticky;
+  top: 12vh; /* stick to top of page */
+  z-index: 5;
+  width: 100%;
+  overflow: hidden; /* Hide scroll bar */
+}
+ 
+/* MIDDLE CONTAINER */
+.ticker-wrap {
+  width: 100%;
+  padding-left: 100%; /* Push contents to right side of screen */
+  background-color: $my-white;
+}
+
+/* INNER CONTAINER */
+@keyframes ticker {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-100%, 0, 0); }
+}
+.ticker-move {
+  /* Basically move items from right side of screen to left in infinite loop */
+  display: inline-block;
+  white-space: nowrap;
+  padding-right: 100%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: ticker;
+  animation-duration: 15s;
+}
+.ticker-move:hover{
+  animation-play-state: paused; /* Pause scroll on mouse hover */
+}
+
+/* ITEMS */
+.ticker-item{
+  color: $my-black;
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+  display: inline-block; /* Lay items in a horizontal line */
+  padding: 0 1rem;
 }
