@@ -15,6 +15,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { BackgroundComponent } from './background/background.component';
 import { MenuItemComponent } from './menu-item/menu-item.component';
+import { BasketComponent } from './basket/basket.component';
+import { ConfirmationComponent } from './confirmation/confirmation.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { MenuItemComponent } from './menu-item/menu-item.component';
     EventsComponent,
     AboutComponent,
     BackgroundComponent,
-    MenuItemComponent
+    MenuItemComponent,
+    BasketComponent,
+    ConfirmationComponent
   ],
   imports: [
     BrowserModule,

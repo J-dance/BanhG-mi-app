@@ -22,50 +22,32 @@
 
   .intro {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
     width: 100%;
-    min-height: 100vh;
     overflow: hidden;
+
+    h3 {
+      text-align: center;
+    }
+
     .foodImg {
-      position: absolute;
-      width: 85%;
       height: auto;
     }
 
-    .foodImg1 {
-      top: 100px;
-      left: -10px;
-    }
-
-    .foodImg2 {
-      top: 500px;
-      right: -10px;
-    }
-
     .sideText {
+      position: absolute;
       transform: rotate(-90deg);
-      font-size: 2.5rem !important;
-      left: -65%;
-      top: 50%;
     }
 
     .topText {
-      top: 5%;
-      left: 25%;
-
+      
       .red {
         color: $my-red;
-        font-size: 2.4rem;
+        font-size: 3.6rem;
       }
-    }
-
-    .middleText {
-      top: 50%;
-      left: 30%;
-    }
-
-    .bottomText {
-      bottom: 0%;
-      left: 10%;
     }
   }
 }
@@ -75,12 +57,74 @@
   .mainLogo {
     width: 80%;
   }
+
+  .intro {
+    min-height: 200vh;
+
+    h3 {
+      text-align: center;
+      font-size: 2rem !important;
+    }
+
+    .foodImg {
+      width: 85%;
+    }
+
+    .sideText {
+      font-size: 2.5rem !important;
+      left: -65%;
+      top: 50%;
+    }
+
+    .topText {
+      
+      .red {
+        color: $my-red;
+        font-size: 2.4rem !important;
+      }
+    }
+
+    .middleText {
+      margin-left: 80px;
+    }
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   .mainLogo {
     width: 70%;
+  }
+
+  .intro {
+    min-height: 200vh;
+
+    h3 {
+      text-align: center;
+      font-size: 2rem !important;
+    }
+
+    .foodImg {
+      width: 85%;
+    }
+
+    .sideText {
+      font-size: 2.5rem !important;
+      left: -65%;
+      top: 50%;
+    }
+
+    .topText {
+      
+      .red {
+        color: $my-red;
+        font-size: 2.4rem !important;
+      }
+    }
+
+    .middleText {
+      margin-left: 80px;
+    }
   }
 }
 
@@ -89,6 +133,46 @@
   .mainLogo {
     width: 60%;
   }
+
+  .intro {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    min-height: 200vh;
+    overflow: hidden;
+
+    h3 {
+      text-align: center;
+    }
+
+    .foodImg {
+      width: 85%;
+      height: auto;
+    }
+
+    .sideText {
+      position: absolute;
+      transform: rotate(-90deg);
+      font-size: 2.5rem !important;
+      left: -65%;
+      top: 50%;
+    }
+
+    .topText {
+      
+      .red {
+        color: $my-red;
+        font-size: 2.4rem;
+      }
+    }
+
+    .middleText {
+      margin-left: 80px;
+    }
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -96,12 +180,98 @@
   .mainLogo {
     width: 50%;
   }
+
+  .intro {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    min-height: 200vh;
+    overflow: hidden;
+
+    h3 {
+      text-align: center;
+      font-size: 3.5rem !important;
+    }
+
+    .foodImg {
+      width: 85%;
+      height: auto;
+    }
+
+    .foodImg1 {
+     
+    }
+
+    .foodImg2 {
+      
+    }
+
+    .sideText {
+      position: absolute;
+      transform: rotate(-90deg);
+      font-size: 2.5rem !important;
+      left: -65%;
+      top: 50%;
+    }
+
+    .topText {
+      
+      .red {
+        font-size: 4rem !important;
+      }
+    }
+
+    .middleText {
+      margin-left: 80px;
+    }
+  }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .mainLogo {
     width: 40%;
+  }
+
+  .intro {
+    min-height: 250vh;
+
+    .foodImg {
+      width: 50%;
+    }
+
+    .foodImg1 {
+     margin-right: 30%;
+    }
+
+    .foodImg2 {
+      margin-left: 40%;
+    }
+
+    .topText {
+      margin-left: 20%;
+      
+      .red {
+        font-size: 4rem !important;
+      }
+    }
+
+    .sideText {
+      font-size: 5rem !important;
+      left: -30%;
+      top: 50%;
+    }
+
+    .middleText {
+      margin-left: 80px;
+    }
+
+    .bottomText {
+      margin-right: 25%;
+    }
   }
 
 }

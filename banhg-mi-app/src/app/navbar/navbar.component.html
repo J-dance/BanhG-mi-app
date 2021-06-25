@@ -1,9 +1,9 @@
 <section class="nav">
   <a class = "logo" routerLink = ''><h2>bánh<span class="red">g</span>-mì</h2></a>
   <ul *ngIf="isOpen">
-    <li><a routerLink = "/menu" routerLinkActive='active' (click) = "toggleNav()">Menu</a></li>
-    <li><a routerLink = "/about" routerLinkActive='active' (click) = "toggleNav()">About</a></li>
-    <li><a routerLink = "/events" routerLinkActive='active' (click) = "toggleNav()">Events</a></li>
+    <li><a routerLink = "/menu" routerLinkActive='active' >Menu</a></li>
+    <li><a routerLink = "/about" routerLinkActive='active' >About</a></li>
+    <li><a routerLink = "/events" routerLinkActive='active' >Events</a></li>
   </ul>
 
   <fa-icon *ngIf = "!isOpen" class="bars" [icon] = 'faBars' (click) = "toggleNav()"></fa-icon>

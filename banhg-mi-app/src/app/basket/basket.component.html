@@ -1,0 +1,45 @@
+<section 
+*ngIf="calculateTotal() > 0" 
+[ngClass]="{'minimisedBasket' : minimised}"
+class="basketContainer">
+  <div class="listItemsContainer gridSection">
+    <h3>Basket</h3>
+    <!-- list only items with quantity > 0 -->
+    <ul>
+      <!-- map over array of names passed into component -->
+      <ng-container *ngFor="let item of orders">
+        <li *ngIf="item.quantity > 0">
+          <div class="billItem">
+            <p>{{item.name}}</p>
+            <p class="bigBold">x{{item.quantity}}</p>
+            <p>Total: £{{item.quantity * item.price}}</p>
+          </div>
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+  <button class="miniButton" (click)="toggleMinimise()">
+    <fa-icon
+    *ngIf="minimised"
+    transform="rotate-180"
+    [icon] = 'faUp'></fa-icon>
+    <fa-icon
+    *ngIf="!minimised"
+    [icon] = 'faUp'></fa-icon>
+  </button>
+  <div class="summaryContainer gridSection">
+    <div>
+      <h3>Summary</h3>
+      <!-- calculate total in basket component -->
+      <p>Order: {{calculateTotal() | currency: 'GBP':true:'1.2-2'}}</p>
+      <p>Delivery: {{deliveryFee | currency: 'GBP': true: '1.2-2'}}</p>
+    </div>
+    <div class="finalSection">
+      <p class="totalText">Total: {{calculateTotalDelivery() | currency: 'GBP': true:'1.2-2'}}</p>
+      <button class="button title">Confirm</button>
+    </div>
+  </div>
+  
+</section>
+
+<!-- {{num | currency:'USD':true:'1.2-2'}} -->

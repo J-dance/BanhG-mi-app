@@ -1,15 +1,39 @@
 <section class = "menu">
   <h1 class = "menuTitle">Menu</h1>
-  <div class = "backroundImage">
-    <h3 class = "title imageText">All our sandwhiches are served in our own in house freshly baked bread so you can still feel the heat!</h3>
+  <div class = "backgroundImage">
+    <div class = "textBox">
+      <h3 class = "title imageText">All our sandwhiches are served in our own in house freshly baked bread so you can still feel the heat!</h3>
+    </div>
   </div>
 
+  <!-- basket conditionally renders -->
+  <section class="basket">
+    <!-- explicitly pass all options into basket component -->
+    <app-basket [orders]="[meat1, meat2, meat3, veg1, veg2, vegan1]"></app-basket>
+  </section>
+
+  <!-- meat menu -->
   <article class="menuContainer shadow-right">
-    <h3>Meat Options</h3>
-    <app-menu-item [option]="meat1"></app-menu-item>
-    <app-menu-item [option]="meat2"></app-menu-item>
-    <app-menu-item [option]="meat3"></app-menu-item>
+    <h3  class="menuHeading">Meat Options</h3>
+    <div class="button sticker">
+      <p class="title">Popular</p>
+    </div>
+    <div class="itemList">
+      <app-menu-item [(option)]="meat1"></app-menu-item>
+      <app-menu-item [(option)]="meat2"></app-menu-item>
+      <app-menu-item [(option)]="meat3"></app-menu-item>
+    </div>
   </article>
+  <!--  veggie and vegan menu -->
+  <article class="menuContainer shadow-right">
+    <h3  class="menuHeading">Veggie and Vegan Options</h3>
+    <div class="itemList">
+      <app-menu-item [(option)]="veg1"></app-menu-item>
+      <app-menu-item [(option)]="veg2"></app-menu-item>
+      <app-menu-item [(option)]="vegan1"></app-menu-item>
+    </div>
+  </article>
+
 </section>
 
  

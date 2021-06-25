@@ -12,8 +12,7 @@
 
 // TITLE/FONTS
 .title {
-  position: absolute;
-  font-size: 2rem;
+  font-size: 3rem;
   color: $my-white;
   letter-spacing: 0.1em;
   text-shadow:
@@ -26,6 +25,18 @@
 .highlight {
   background: $my-orange;
   padding: 5px;
+}
+
+.bigBold {
+  font-weight: 500;
+  font-size: 1.5rem !important;
+  text-align: center;
+}
+
+.button {
+  background: $my-green;
+  padding: 3.5px 8px;
+  border: 2px solid $my-black;
 }
 
 // BOX SHADOW THEME
@@ -58,7 +69,7 @@
 /* INNER CONTAINER */
 @keyframes ticker {
   0% { transform: translate3d(0, 0, 0); }
-  100% { transform: translate3d(-100%, 0, 0); }
+  100% { transform: translate3d(-200%, 0, 0); }
 }
 .ticker-move {
   /* Basically move items from right side of screen to left in infinite loop */

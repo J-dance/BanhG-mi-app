@@ -1,7 +1,16 @@
 <section class="item">
   <h3>{{option.name}}</h3>
-  <p>{{option.description}}</p>
-  <p>£{{option.price}}</p>
-  <input type="number">
-  <button>add</button>
+  <div class="descriptionContainer">
+    <p>{{option.description}}</p>
+  </div>
+  <p class="highlight price">£{{option.price}}</p>
+  <p class="amountText">{{quantity}}</p>
+  <div class="buttonContainer">
+    <button (click)="increase()">
+      <fa-icon [icon] = 'faPlus'></fa-icon>
+    </button>
+    <button (click)="decrease()">
+      <fa-icon [icon] = 'faMinus'></fa-icon>
+    </button>
+  </div>
 </section>

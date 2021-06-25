@@ -1,5 +1,57 @@
+@import "../../assets/styles.module.scss";
+
 .item {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 10px 15px;
+  width: 20vw;
+
+  .descriptionContainer {
+    width: 100%;
+    height: 130px;
+    margin: 10px 0px;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 20px 0px;
+  }
+
+  p {
+    text-align: center;
+    font-family: $font-standard;
+    margin: 10px 0px;
+  }
+
+  .price {
+    margin: 10px 0px;
+  }
+
+  .amountText {
+    text-align: center;
+    width: 30%;
+    background: rgba($my-orange, 0.05);
+    border-radius: 5px;
+    border: 2px solid $my-black;
+    padding: 5px 8px;
+    margin: 10px 0px;
+  }
+
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+  }
+
+  button {
+    width: 30px;
+    height: 30px;
+    margin: 20px 5px;
+    background: $my-white;
+    border: 2px solid $my-red;
+    box-shadow: 5px 5px 5px $my-black;
+  }
 }
