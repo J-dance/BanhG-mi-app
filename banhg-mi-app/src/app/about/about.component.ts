@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, NgModule, OnInit } from '@angular/core';
+import {IvyCarouselModule} from 'angular-responsive-carousel';
+
+@NgModule({
+  imports: [IvyCarouselModule]
+})
 
 @Component({
   selector: 'app-about',

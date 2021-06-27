@@ -1,0 +1,52 @@
+@import '../../assets/styles.module.scss';
+
+.aboutContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 90vh;
+
+  .carouselContainer {
+    width: 100%;
+
+    .slide {
+      display: flex;
+      align-items: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    
+    // slide images
+
+    .slide1 {
+      background-image: url('../../assets/images/night.jpg');
+      background-position: center;
+    }
+
+    .slide2 {
+      background-image: url('../../assets/images/truck.jpg');
+      background-position: center;
+    }
+
+    .slide3 {
+      background-image: url('../../assets/images/cooking.jpg');
+      background-position: 0% 80%;    }
+
+    .slide4 {
+      background-image: url('../../assets/images/green.jpg');
+      background-position: 0% 30%;
+    }
+
+   .slideContent {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 50px 100px;
+      text-align: center;
+      font-family: $font-standard;
+      font-size: 1.5rem;
+    }
+
+  }
+}
