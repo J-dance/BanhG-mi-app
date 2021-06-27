@@ -36,10 +36,8 @@ class="basketContainer">
     </div>
     <div class="finalSection">
       <p class="totalText">Total: {{calculateTotalDelivery() | currency: 'GBP': true:'1.2-2'}}</p>
-      <button class="button title">Confirm</button>
+      <button class="button title" [routerLink]="['/confirmation']">Confirm</button>
     </div>
   </div>
   
 </section>
-
-<!-- {{num | currency:'USD':true:'1.2-2'}} -->

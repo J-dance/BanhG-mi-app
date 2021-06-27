@@ -2,10 +2,15 @@
   <div class="content shadow-right">
     <!-- loading animation content -->
     <div *ngIf="isLoading" class="loadingContainer">
-      <div class="circle"></div>
-      <div class="circle"></div>
-      <div class="circle"></div>
+      <div class="circle" ></div>
+      <div class="circle circ2" ></div>
+      <div class="circle circ3" ></div>
     </div>
 
+    <!-- Order Complete screen -->
+    <div *ngIf="!isLoading" class="orderComplete">
+      <h1>Order Complete</h1>
+      <p>It's on it's way!</p>
+    </div>
   </div>
 </section>
