@@ -24,7 +24,7 @@
 
 .highlight {
   background: $my-orange;
-  padding: 5px;
+  padding: 6px 10px;
 }
 
 .bigBold {
@@ -50,6 +50,7 @@
 
 .textBox {
   padding: 40px 25px;
+  width: 100%;
   background: rgba($my-black, 0.5);
 }
 
@@ -97,4 +98,13 @@
   letter-spacing: 0.1em;
   display: inline-block; /* Lay items in a horizontal line */
   padding: 0 1rem;
+}
+
+// RESPONSIVE DESIGN
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .textBox {
+    padding: 20px 20px !important;
+  }
 }

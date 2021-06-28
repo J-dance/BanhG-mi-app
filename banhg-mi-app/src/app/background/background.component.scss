@@ -46,26 +46,26 @@
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 600px) and (max-width: 768px) {
   .popBackground {
-    grid-template-columns: repeat(auto-fill, 7.5vw);
-    grid-gap: 7.5vw;
+    grid-template-columns: repeat(auto-fill, 3.5vw);
+    grid-gap: 3.5vw;
   }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 992px) {
   .popBackground {
-    grid-template-columns: repeat(auto-fill, 7.5vw);
-    grid-gap: 7.5vw;
+    grid-template-columns: repeat(auto-fill, 4.5vw);
+    grid-gap: 4.5vw;
   }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
   .popBackground {
-    grid-template-columns: repeat(auto-fill, 2.5vw);
-    grid-gap: 2.5vw;
+    grid-template-columns: repeat(auto-fill, 4.5vw);
+    grid-gap: 4.5vw;
   }
 }
 

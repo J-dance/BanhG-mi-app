@@ -18,7 +18,7 @@ export class MenuComponent implements OnInit {
   };
 
   meat2: item = {
-    name: "BánhG-in chicken",
+    name: "BánhG-in Chicken",
     description: "Vietnamese BBQ chicken, lemongrass, hoisin and siracha mayo sauce, pickled cucumber, carrot and radish, served with coriander, fresh chill and our freshly baked bread.",
     price: 7.99,
     quantity: 0

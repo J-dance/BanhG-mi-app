@@ -1,14 +1,19 @@
 @import '../../assets/styles.module.scss';
 
 .aboutContainer {
+  position: relative;
   display: flex;
   align-items: center;
   width: 100%;
   min-height: 90vh;
 
   .carouselContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
     width: 100%;
-
     .slide {
       display: flex;
       align-items: center;

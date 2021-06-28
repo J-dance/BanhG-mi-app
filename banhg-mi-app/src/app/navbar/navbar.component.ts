@@ -14,6 +14,15 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    if (window.innerWidth < 992) {
+      this.isOpen = false;
+    }
+  }
+
+  onResize(event: any): void {
+    if (event.target.innerWidth < 992) {
+      this.isOpen = false;
+    }
   }
 
   toggleNav = (): void => {

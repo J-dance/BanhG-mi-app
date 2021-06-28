@@ -1,7 +1,6 @@
 @import "../../assets//styles.module.scss";
 
 .home {
-  min-height: 200vh;
   width: 100%;
 
   .landing {
@@ -25,30 +24,42 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
     width: 100%;
-    overflow: hidden;
+    height: auto;
 
     h3 {
       text-align: center;
     }
 
     .foodImg {
-      height: auto;
+      width: 100%;
+      height: 100%;
     }
 
-    .sideText {
-      position: absolute;
-      transform: rotate(-90deg);
-    }
+    .imageContainer {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
 
-    .topText {
-      
-      .red {
-        color: $my-red;
-        font-size: 3.6rem;
+      .textContainer {
+        position: absolute;
+        padding: 50px 100px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
     }
+
+    .bottomGap {
+      margin-bottom: 100px;
+    }
+  
+    .red {
+      color: $my-red;
+    }
+
   }
 }
 
@@ -59,173 +70,135 @@
   }
 
   .intro {
-    min-height: 200vh;
 
     h3 {
-      text-align: center;
-      font-size: 2rem !important;
+      font-size: 1.8rem !important;
     }
 
-    .foodImg {
-      width: 85%;
+    .red {
+      font-size: 1.9rem;
     }
 
-    .sideText {
-      font-size: 2.5rem !important;
-      left: -65%;
-      top: 50%;
-    }
-
-    .topText {
-      
-      .red {
-        color: $my-red;
-        font-size: 2.4rem !important;
+    .imageContainer {
+      height: 40vh;
+      .foodImg1 {
+        object-fit: cover;
+        object-position: center;
+      }
+  
+      .foodImg2 {
+        object-fit: cover;
+        object-position: center;
       }
     }
 
-    .middleText {
-      margin-left: 80px;
+    .topText, .middleText {
+      margin: 75px 25px;
     }
   }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  .mainLogo {
-    width: 70%;
-  }
-
-  .intro {
-    min-height: 200vh;
-
-    h3 {
-      text-align: center;
-      font-size: 2rem !important;
-    }
-
-    .foodImg {
-      width: 85%;
-    }
-
-    .sideText {
-      font-size: 2.5rem !important;
-      left: -65%;
-      top: 50%;
-    }
-
-    .topText {
-      
-      .red {
-        color: $my-red;
-        font-size: 2.4rem !important;
-      }
-    }
-
-    .middleText {
-      margin-left: 80px;
-    }
-  }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  .mainLogo {
-    width: 60%;
-  }
-
-  .intro {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-    min-height: 200vh;
-    overflow: hidden;
-
-    h3 {
-      text-align: center;
-    }
-
-    .foodImg {
-      width: 85%;
-      height: auto;
-    }
-
-    .sideText {
-      position: absolute;
-      transform: rotate(-90deg);
-      font-size: 2.5rem !important;
-      left: -65%;
-      top: 50%;
-    }
-
-    .topText {
-      
-      .red {
-        color: $my-red;
-        font-size: 2.4rem;
-      }
-    }
-
-    .middleText {
-      margin-left: 80px;
-    }
-  }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 600px) and (max-width: 768px) {
   .mainLogo {
     width: 50%;
   }
 
   .intro {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-    min-height: 200vh;
-    overflow: hidden;
 
     h3 {
-      text-align: center;
-      font-size: 3rem !important;
-    }
-
-    .foodImg {
-      width: 85%;
-      height: auto;
-    }
-
-    .foodImg1 {
-     
-    }
-
-    .foodImg2 {
-      
-    }
-
-    .sideText {
-      position: absolute;
-      transform: rotate(-90deg);
       font-size: 2rem !important;
-      left: -65%;
-      top: 50%;
     }
 
-    .topText {
-      
-      .red {
-        font-size: 4rem !important;
+    .red {
+      font-size: 2.1rem;
+    }
+
+    .imageContainer {
+      height: 60vh;
+      .foodImg1 {
+        object-fit: cover;
+        object-position: center;
+      }
+  
+      .foodImg2 {
+        object-fit: cover;
+        object-position: center;
       }
     }
 
-    .middleText {
-      margin-left: 80px;
+    .topText, .middleText {
+      margin: 70px 110px;
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .mainLogo {
+    width: 50%;
+  }
+
+  .intro {
+
+    h3 {
+      font-size: 2.4rem !important;
+    }
+
+    .red {
+      font-size: 2.5rem;
+    }
+
+    .imageContainer {
+      height: 40vh;
+      .foodImg1 {
+        object-fit: cover;
+        object-position: center;
+      }
+  
+      .foodImg2 {
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    .topText, .middleText {
+      margin: 80px 125px;
+    }
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .mainLogo {
+    width: 60%;
+  }
+
+  .intro {
+
+    h3 {
+      font-size: 3rem !important;
+    }
+
+    .red {
+      font-size: 3.1rem;
+    }
+
+    .imageContainer {
+      height: 50vh;
+      .foodImg1 {
+        object-fit: cover;
+        object-position: center;
+      }
+  
+      .foodImg2 {
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    .topText, .middleText {
+      margin: 125px 150px;
     }
   }
 }
@@ -233,45 +206,34 @@
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .mainLogo {
-    width: 40%;
+    width: 50%;
   }
 
   .intro {
-    min-height: 250vh;
 
-    .foodImg {
-      width: 50%;
+    h3 {
+      font-size: 3rem !important;
     }
 
-    .foodImg1 {
-     margin-right: 30%;
+    .red {
+      font-size: 3.1rem;
     }
 
-    .foodImg2 {
-      margin-left: 40%;
-    }
-
-    .topText {
-      margin-left: 2%;
-      
-      .red {
-        font-size: 4rem !important;
+    .imageContainer {
+      height: 60vh;
+      .foodImg1 {
+        object-fit: cover;
+        object-position: center;
+      }
+  
+      .foodImg2 {
+        object-fit: cover;
+        object-position: center;
       }
     }
 
-    .sideText {
-      font-size: 5rem !important;
-      left: -40%;
-      top: 50%;
-    }
-
-    .middleText {
-      margin-left: 80px;
-    }
-
-    .bottomText {
-      margin-right: 10%;
+    .topText, .middleText {
+      margin: 125px 150px;
     }
   }
-
 }

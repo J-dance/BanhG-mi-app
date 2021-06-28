@@ -3,10 +3,10 @@
 .footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background: rgba($my-grey, 0.5);
-  width: 100%;
+  background: rgba($my-white, 0.1);
+  width: 100vw;
   height: auto;
-  padding: 20px;
+  padding: 20px 50px;
   font-family: $font-standard;
 
   ul {
